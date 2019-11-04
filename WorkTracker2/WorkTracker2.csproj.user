@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PublishUrlHistory>I:\Fullservice\Dept\Mail Center\Deferred Output\WorkTracker\|\\ad.dstsystems.com\dskcdfs\Fullservice\Dept\Mail Center\Deferred Output\WorkTracker\|C:\Users\DT224889\Documents\DOP Reporting\|C:\Users\DT224889\Desktop\Release\</PublishUrlHistory>
+    <InstallUrlHistory>\\dskcfile1pd\data1\Fullservice\Dept\Mail Center\Deferred Output\WorkTracker\|\\ad.dstsystems.com\dskcdfs\Fullservice\Dept\Mail Center\Deferred Output\WorkTracker\|\\ad.dstsystems.com\dskcdfs\Fullservice\Dept\Mail Center\Deferred Output\</InstallUrlHistory>
+    <SupportUrlHistory />
+    <UpdateUrlHistory />
+    <BootstrapperUrlHistory />
+    <ErrorReportUrlHistory />
+    <FallbackCulture>en-US</FallbackCulture>
+    <VerifyUploadedFiles>false</VerifyUploadedFiles>
+  </PropertyGroup>
+  <PropertyGroup>
+    <EnableSecurityDebugging>false</EnableSecurityDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <StartAction>Project</StartAction>
+  </PropertyGroup>
+</Project>

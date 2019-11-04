@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/cshtml">
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Trevor Banhart" />
+    <meta name="description" content="A guide to WorkTracker" />
+    <link rel="stylesheet" type="text/css" href="Template.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+    </style>
+    <title>WorkTracker Documentation</title>
+</head>
+<body>
+    <script type="text/javascript">
+        document.getElementById("button").onclick = function () {
+            location.href = value;
+        };
+    </script>
+    <div class="flex-container">
+        <div class="header">
+            <h1 id="top">Welcome to the WorkTracker Documentation</h1>
+        </div>
+
+        <div class="seperator"></div>
+
+        <div class="row">
+            <div class="side">
+                <form>
+                    <input type="button" class="button" value="Home" onclick="location.href = 'Start.html';" />
+                    <input type="button" class="button" value="Installation" onclick="location.href = 'Installation.html';" />
+                    <input type="button" class="button" value="Core Features" onclick="location.href = 'CoreFeatures.html';" />
+                    <input type="button" class="button selected" value="Report Generator" onclick="location.href = 'ReportGenerator.html';" />
+                    <input type="button" class="button" value="Utilities" onclick="location.href = 'Utilities.html';" />
+                </form>
+            </div>
+
+            <div class="main" , id="content">
+                <h2>Report Generator</h2>
+                <p>This is the main window for viewing the details of letters which have had QC sheets generated. The Report Generator utility allows for profiles to be designated for generation to create lists of letter details and counts. All profile information is saved locally, meaning if the data is changed to have a new profile added, it will be removed when the program is updated to a new version.</p>
+
+                <h3>Report Details</h3>
+                <p>Generation of reports is covered in the Report Details section. A start date and end date can be selected to create a range of dates in which to include in the report that is generated. The details of the report are set using the Reporting Profile list. Each profile has an effect on the levels of the report tree that is created, meaning it is important to know which profile will include the information they are needing to find. Additionally, the profile sets which details of a letter will show counts in the tree.</p>
+
+                <h3>Tables</h3>
+                <p>Each profile has a Table that it relates to, so when selecting a profile, it is important to select the correct table in order to find the profile in the list. The Active Letters table of the database shows letters that have not yet been passed through QC or destroyed after submitting. When a letter is passed or destroyed, it is sent to the Archive table. To check the details of when a letter changed in status, there is also a QC History table to lookup status changes in a letter.</p>
+
+                <h3>Generating Reports</h3>
+                <p>When all fields in Report Details are complete, the Generate Report button will fill in the Report Tree with the information specified in the profile for the items submitted in the date range.</p>
+
+                <h3>QC Controls</h3>
+                <p>The Report Generator is built with a QC Controls implemented to track the current status of a letter through to QC completion. By selecting a correspondence number in the Report Tree and clicking a control button, a user doing QC can update the status of a letter and send it on to the next step. For Removing or Failing a letter, the user must designate a reason why. Common reasons are populated into the comments box, however if none of them matches, a user can enter a custom entry in order to make for a more accurate status update. When failing a letter, a new QC sheet will be printed to replace the old one so it accurately represents the status when handed back to the user that matched the letter. When approving a letter, no comment is necessary and the letter will be completed and archived.</p>
+
+                <h3>Search</h3>
+                <p>In order to find a specific letter or group of letters, a Search function has been created. Entering a correspondence number will cause the specified table to be searched for the number within the date frame selected and all information entered with it will be presented. If a value other than a correspondence number is entered, the generator will search for that term in the selected date frame to retrieve all letters related to that term and display their correspondence numbers. For example, this feature can be used to search all submitted letters for a specified user or client when attempting to find a correspondence number.</p>
+
+                <h3>Report Tree</h3>
+                <p>The Report Tree is the area that all generated reports are displayed in. When a report is generated, the Tree will be filled with nodes that can be expanded or collapsed to sort through the information about the letters more conveniently. When a correspondence number is selected and the user opts to have the number changed in QC status, the node will be removed, as to prevent applying multiple status changes to a letter. If the user wishes to view the item again, provided it is still in the specified table, the user may refresh the tree by generating it again.</p>
+                </div>
+        </div>
+        <div class="seperator"></div>
+    </div>
+</body>
+</html>

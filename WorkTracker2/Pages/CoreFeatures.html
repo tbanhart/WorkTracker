@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/cshtml">
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Trevor Banhart" />
+    <meta name="description" content="A guide to WorkTracker" />
+    <link rel="stylesheet" type="text/css" href="Template.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+    </style>
+    <title>WorkTracker Documentation</title>
+</head>
+<body>
+    <script type="text/javascript">
+        document.getElementById("button").onclick = function () {
+            location.href = value;
+        };
+    </script>
+    <div class="flex-container">
+        <div class="header">
+            <h1 id="top">Welcome to the WorkTracker Documentation</h1>
+        </div>
+
+        <div class="seperator"></div>
+
+        <div class="row">
+            <div class="side">
+                <form>
+                    <input type="button" class="button" value="Home" onclick="location.href = 'Start.html';" />
+                    <input type="button" class="button" value="Installation" onclick="location.href = 'Installation.html';" />
+                    <input type="button" class="button selected" value="Core Features" onclick="location.href = 'CoreFeatures.html';" />
+                    <input type="button" class="button" value="Report Generator" onclick="location.href = 'ReportGenerator.html';" />
+                    <input type="button" class="button" value="Utilities" onclick="location.href = 'Utilities.html';" />
+                </form>
+            </div>
+
+            <div class="main" , id="content">
+
+                <h2>Core Features</h2>
+                <p>The WorkTracker program was designed with the DOP in mind. 
+                The program is built to provide minor automation to help the process run more smoothly
+                when generating QC sheets, recording work, and retrieving the status of a letter. 
+                The core automation processes for the program all revolve around this screen, 
+                the core WorkTracker UI. On this screen, a user is able to enter all information 
+                needed to fill out a QC sheet, and select whether they need a QC sheet printed, 
+                or are just needing to update a record in the database.</p>
+
+                <h3>Correspondence Details</h3>
+                <p>The Correspondence Details section of the window is the required information 
+                for the item to be submitted to the database. The client box is pulled from clients 
+                selected in the Clients utility. In the Letter Type box, the user may select which 
+                type should be shown on the QC sheet. If all information is not entered into these 
+                boxes and a user opts to print the QC sheet anyway, the program will refuse to 
+                continue until all information is complete.</p>
+
+                <h3>Additional Information</h3>
+                <p>All other information is handled in the Additional Information section. 
+                This includes the Name on a Death Certificate, the Tracking Number for overnight 
+                letters, and the corr type of the letter if other was selected for the type. 
+                Additionally, a user may add comments to a letter if they feel it needs information 
+                to be passed to the database. If the letter type is designated as other and the 
+                corresponding box is not complete, a window will prompt the user to enter the type 
+                in order to proceed.</p>
+
+                <h3>Complete Letter</h3>
+                <p>To send a letter to the database, a user will need to enter all requisite 
+                information in the form and select Print QC Sheet in the Complete Letter section. 
+                Selecting this button prints out a QC sheet automatically filled with all entered
+                information. If a correspondence number already exists in the database upon submitting, the user 
+                will be prompted to update the current entry or start a new one; this feature allows 
+                a user to fix any mistakes they may have overlooked when first printing the QC sheet 
+                and improves accuracy.</p>
+
+                <h3>Recent Letters</h3>
+                <p>After a letter has been committed, it will automatically be added to the Recent 
+                Letters box. The box shows a list of the last three letters that have been added and
+                allows the user to add all of the information from that letter back into the main 
+                window. After a letter has been selected, changing any of the information on the main 
+                area will apply the changes to the letter that was previously selected. Thus, if a 
+                mistake is made to the encorr number, type, or any other piece of information, it can
+                be quickly remedied by selecting the letter and entering the correct information.</p>
+
+                <h3>Toolbar</h3>
+                <p>Features not essential to the core operations of the program can be accessed through the toolbar. This includes the options to change the user, select clients, and generate reports. Each of these features will later be discussed in greater detail. The toolbar also allows the user to exit the application.</p>
+            </div>
+        </div>
+        <div class="seperator"></div>
+    </div>
+</body>
+</html>

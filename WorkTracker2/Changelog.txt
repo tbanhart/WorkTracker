@@ -1,0 +1,96 @@
+﻿1.1
++Project approved by management
+
+1.2
++Redone reporting window, filter profiles can be created
+	+In Reporting Profiles file, enter tiers for nodetree in the array
+	+The last in the list will always contain encorr numbers that match all above criteria
+	+Two profiles are standard for searching by user and by client with type
+-Removed clients and filters checkboxes
+	-Select All and None were also removed, as there was no need
+-Removed search by filter
+	-With no filter there was no need
+	-Searching is much easier in profiles
+-Removed ReportGenerator objects, ObjectManager is much more efficient 
+
+1.2.1
++Added Changelog file
++Added counts to reporting profiles
+	+Entering a string that matches an entry in the tree array will have it create a count of all letters under it in the node
++Added new date selector
+	+Use DtBox instead of DatePicker, allows for much easier selection of date ranges
+-Removed old database access in preparation for SQL Server access
+
+1.2.2
++Changed Switch Client button label to Update Forms
++Added database for QC Tracking
++Created a new namespace for Utility classes
+	+Constants added to Utilities
+	+Preferences class created to replace the text file
++Cleaned up the report tree box
+	+Added a label
+	-Removed tabs, not needed with new system
++Changed comments box to be a normal text box instead of rich text box
++Added new QC Process
+	+Reporting Window has ability to select Approve or Deny on encorr entry
+	+Approval sends the item to completed status
+	+Denial sends to failed status and requires comments
++Adding a letter updates the item if there is already an entry
+Bugs:
+	+Dictionary not being cleared when being added to count list
+
+1.2.3
++Reworked client updater
+	+Pulls from db
+	+Stores list of current clients locally
++Username is taken from preferences object, set in main form to be Windows user name
++Fixed Add to Database function not recognizing duplicates
++Client Updater is up and running again
+	+Add or remove clients to the client file from categories
+	+Data pulled from Clients table of database
+	+On clicking Done, clears out the clients.json file and replaces it with selected clients
++Tab index applied to all three forms
++Cleaned up text boxes in Worktracker to avoid errors
+	+Encorr only accepts numbers
+	+Encorr has insert functionality of replacing text while typing
+	+Clients is a drop down with no custom entry
++Users are managed in database table
+	+When a windows username is not contained in database on startup, user is prompted to enter their initials for QC sheet generation
+	+Initials can be changed via toolbar option
+	+Text that appears in label is entered when opening form
+
+1.2.4
++Added installer to shared drive instead of deploying through .zip archives
++Prints a QC sheet complete with details on QC fail
++Completed letters are archived in seperate table
+
+1.2.4.10
++QC Fail sheets now correctly generate with QC user initials and comments
++Fix: updating info was giving an error about converting to int -- did not have apostrophes around values being pushed
++Fix: searching was not displaying when trying to find encorr
++Generator now searches for search term contained in any entry, not just matching entire string
++HTML documentation created to answer questions
+
+1.2.5.0
+Main Window
+ +Moved Add to Database button to Utility menu, Add to Queue button sends to database and prints
+ +Added a list to display and edit recently submitted entries
+ +Fix: "Other" type is now correctly marked on QC Sheet with comments
+Report Generator
+ +Approved and removed letters are now removed from active letters when archived
+ +Report views now organize all tree nodes alphabetically (or numerically)
+ +Doing QC on a letter no longer prints a QC sheet
+ +QC Comments box has pre-filled options available
+ +Fix: No longer need to select a date prior to generating a report, will automatically do today's date
+ +Fix: Correctly pulls letters from all selected dates
+Client Updater
+ +Client lists organize clients in alphabetical order
+Updating
+ +Added an updates screen when first loading after an update
+ +No longer need to add all of clients again when program updates
+ 
+1.2.5.1
+Main Window
+ +Fix: QC sheet printed when Main was asking you to update letter
+ +Fix: Type no longer prints both in other and in selected
+ +Fix: Selecting a range of text replaces the range with the key typed instead of replacing just the first number

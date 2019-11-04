@@ -1,0 +1,217 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Trevor Banhart" />
+    <meta name="description" content="A guide to WorkTracker" />
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        body{
+            font-family:Tahoma;
+            margin:0;
+        }
+
+        .header{
+            padding:60px;
+            text-align:center;
+            background:#1A80CA;
+            color:#FFFCFF;
+            overflow:hidden;
+        }
+
+        .seperator{
+            display: flex;
+            background-color:#50514F;
+            height:10px;
+        }
+
+        .row{
+            display: flex;
+            flex-wrap:wrap;
+        }
+
+        .side{
+            flex:20%;
+            background-color: #4F6D7A;
+            overflow:hidden;
+        }
+
+        .main{
+            flex:70%;
+            background-color:#C0D6DF;
+            padding:20px;
+            overflow:auto;
+        }
+
+        .exampleImg{
+            width:100%;
+            padding:20px;
+        }
+
+        .navbox{
+            font-size:16px;
+            text-align:center;
+            padding:45px;
+            color:#FFFCFF;
+            height:100px;
+            width:100%;
+            background:#50514F;
+        }
+
+        .navbox:hover{
+            color:black;
+            background:#C0D6DF;
+        }
+
+        @media screen and (max-width:700px){
+            .row, .seperator{
+                flex-direction: column;
+            }
+        }
+    </style>
+    <title>WorkTracker Documentation</title>
+</head>
+
+<body>
+    <div class="header">
+        <h1 id="top">Welcome to the WorkTracker Documentation</h1>
+    </div>
+
+    <div class="seperator"></div>
+
+    <div class="row">
+        <div class="side">
+            <a href="#installation">
+                <div class="navbox">Installation</div>
+            </a>
+            <a href="#coreFeatures">
+                <div class="navbox">Core Features</div>
+            </a>
+            <a href="#utilities">
+                <div class="navbox">Utilities</div>
+            </a>
+        </div>
+
+        <div class="main">
+            <h3 id="installation">Installation</h3>
+            <p>
+                The WorkTracker files can all be setup from the Deferred Output folder of the I: drive. Since the setup is done for a shared folder, updates will be automatically detected when launching the WorkTracker application.
+                When an update is detected by the launch sequence, a window will prompt the user to update the program. Always select yes, as a new update may patch in a fix for currently existing issues.
+            </p>
+
+            <h5>First Load</h5>
+            <p>
+                The first time the application is used, a window will prompt the user to enter their initials. The initials entered will be shown on QC sheets that user generates when the submit the information to the printer via
+                the main window. A minimum of two and a maximum of three characters can be entered for their initials, and if a mistake is made or the user wants to change them at a later date, they may do so by selecting the User
+                utility in the toolbar of the main window. User initials are submitted to the DOP database and associated with the user's DT number from their Windows username.
+                As such, when a user changes computers the program will automatically load their initials, provided they have used the program before.
+            </p>
+
+            <h5>Client Setup</h5>
+            <p>
+                Before printing the QC sheet for their first letter, a user will need to designate which clients they are responsible for. This can be done in the clients utility found in the toolbar and must be done before the user
+                can begin printing QC sheets. For more information on selecting clients, see the <b>Clients</b> section of the Utilities chapter.
+            </p>
+
+            <h3 id="coreFeatures">Core Features</h3>
+            <p>
+                The WorkTracker program was designed with the DOP in mind. The program is built to provide minor automation to help the process run more smoothly when generating QC sheets, recording work, and retrieving the status
+                of a letter.
+            </p>
+
+            <h5>The Main Window</h5>
+            <p>
+                The core automation processes for the program all revolve around this screen, the core WorkTracker UI. On this screen, a user is able to enter all information needed to fill out a QC sheet, and select whether they need
+                a QC sheet printed, or are just needing to update a record in the database. <br />
+            </p>
+            <p>
+                The <b>Correspondence Details</b> section of the window is the required information for the item to be submitted to the database. The client box is pulled from clients selected in the <b>Clients</b> utility. In the Letter
+                Type box, the user may select which type should be shown on the QC sheet. If all information is not entered into these boxes and a user opts to print the QC sheet anyway, the program will refuse to continue until all information
+                is complete.<br />
+            </p>
+            <p>
+                All other information is handled in the <b>Additional Information</b> section. This includes the Name on a Death Certificate, the Tracking Number for overnight letters, and the corr type of the
+                letter if other was selected for the type. Additionally, a user may add comments to a letter if they feel it needs information to be passed to the database. If the letter type is designated as other and the corresponding box
+                is not complete, a window will prompt the user to enter the type in order to proceed.<br />
+            </p>
+            <p>
+                To send a letter to the database, a user will need to enter all requisite information in the form and select one of the options in the <b>Complete Letter</b> field. The button most used is
+                the Print QC Sheet button, as it will send information to the database and at the same time print a QC sheet populated with all the information required to pass the letter on. If non-essential information is not populated and the
+                user feels they may need to include it after they have printed the sheet, but it does not need to be entered on the QC sheet, the Add to Database feature is available to override the print function and not generate a QC sheet.
+                If a correspondence number already exists in the database upon submitting, the user will be prompted to update the current entry or start a new one; this feature allows a user to fix any mistakes they may have overlooked when first
+                printing the QC sheet and allow for greater accuracy.
+            </p>
+
+            <h5>Toolbar</h5>
+            <p>
+                Features not essential to the core operations of the program can be accessed through the toolbar. This includes the options to change the user, select clients, and generate reports. Each of these features will later be discussed
+                in greater detail. The toolbar also allows the user to exit the application.
+            </p>
+
+            <h3 id="utilities">Utilities</h3>
+            <p>To support the core functions of the program, the WorkTracker application is packaged with a few additional utilites in order to make it easier to view and change application data.<br /></p>
+
+            <h5>Change User</h5>
+            <p>
+                As mentioned earlier, if a user enters the incorrect initials or wishes to change how their name is displayed on the QC sheets they generate, they can do so by selecting the Change User utility. The minimum and maximum size for
+                entries are two and three, respectively. The initials a user designates are tied to their ID number provided by DST, which is derived from their Windows username. As such, a user changing to a different computer will still be known
+                by the same initials if they change computers.<br />
+            </p>
+
+            <h5>Clients</h5>
+            <p>
+                In order to designate a client to print QC sheets for, a user must first populate their client list through the use of the <b>Clients</b> utility. Clients are divided into prods, and a user may select which prod they are
+                servicing to filter the client list into relevant clients. Beneath the boxes for all clients and user clients are buttons that allow a selected client from that list to be added or removed from the client list. When the user client
+                list contains all clients the user is responsible for, clicking done will update the main window with all user clients.<br />
+            </p>
+
+            <p>The user client list is stored locally in the application data, and as such will be reset when the program updates, requiring the user to designate their clients again.<br /></p>
+
+            <h5>Report Generator</h5>
+            <p>
+                This is the main window for viewing the details of letters which have had QC sheets generated. The <b>Report Generator</b> utility allows for profiles to be designated for generation to create lists of letter details and counts.
+                All profile information is saved locally, meaning if the data is changed to have a new profile added, it will be removed when the program is updated to a new version.
+            </p>
+
+            <p>
+                Generation of reports is covered in the <b>Report Details</b> section. A start date and end date can be selected to create a range of dates in which to include in the report that is generated. The details of the report are set
+                using the Reporting Profile list. Each profile has an effect on the levels of the report tree that is created, meaning it is important to know which profile will include the information they are needing to find. Additionally, the
+                profile sets which details of a letter will show counts in the tree.
+            </p>
+
+            <p>
+                Each profile has a Table that it relates to, so when selecting a profile, it is important to select the correct table in order to find the profile in the list.
+                The <b>Active Letters</b> table of the database shows letters that have not yet been passed through QC or destroyed after submitting. When a letter is passed or destroyed, it is sent to the <b>Archive</b> table. To check the
+                details of when a letter changed in status, there is also a <b>QC History</b> table to lookup status changes in a letter.
+            </p>
+
+            <p>When all fields in <b>Report Details</b> are complete, the Generate Report button will fill in the <b>Report Tree</b> with the information specified in the profile for the items submitted in the date range.</p>
+
+            <p>
+                The Report Generator is built with a <b>QC Controls</b> implemented to track the current status of a letter through to QC completion. By selecting a correspondence number in the <b>Report Tree</b> and clicking a control button,
+                a user doing QC can update the status of a letter and send it on to the next step. For Removing or Failing a letter, the user must designate a reason why. Common reasons are populated into the comments box, however if none of them
+                matches, a user can enter a custom entry in order to make for a more accurate status update. When failing a letter, a new QC sheet will be printed to replace the old one so it accurately represents the status when handed back to
+                the user that matched the letter. When approving a letter, no comment is necessary and the letter will be completed and archived.
+            </p>
+
+            <p>
+                In order to find a specific letter or group of letters, a <b>Search</b> function has been created. Entering a correspondence number will cause the specified table to be searched for the number within the date frame selected and
+                all information entered with it will be presented. If a value other than a correspondence number is entered, the generator will search for that term in the selected date frame to retrieve all letters related to that term and display
+                their correspondence numbers. For example, this feature can be used to search all submitted letters for a specified user or client when attempting to find a correspondence number.
+            </p>
+
+            <p>
+                The <b>Report Tree</b> is the area that all generated reports are displayed in. When a report is generated, the Tree will be filled with nodes that can be expanded or collapsed to sort through the information about the letters more
+                conveniently. When a correspondence number is selected and the user opts to have the number changed in QC status, the node will be removed, as to prevent applying multiple status changes to a letter. If the user wishes to view the item
+                again, provided it is still in the specified table, the user may refresh the tree by generating it again.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

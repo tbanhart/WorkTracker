@@ -1,0 +1,27 @@
+﻿{
+  "User Letters": {
+    "tree": [ "User", "Encorr" ],
+    "count": [],
+    "table": [ "[Active Letters]" ]
+  },
+  "User Letters with Details": {
+    "tree": [ "User", "Client", "Status", "Encorr" ],
+    "count": [],
+    "table": [ "[Active Letters]" ]
+  },
+  "Counts by Client": {
+    "tree": [ "Client", "Type", "Encorr" ],
+    "count": [ "Client", "Type" ],
+    "table": [ "[Active Letters]" ]
+  },
+  "Tracking Numbers": {
+    "tree": [ "Client", "Type", "Tracking" ],
+    "count": [ "Client" ],
+    "table": [ "[Active Letters]" ]
+  },
+  "Status Changes": {
+    "tree": [ "Encorr", "Date", "User", "Old Status", "New Status", "Comments" ],
+    "count": [],
+    "table": [ "[QC History]" ]
+  }
+}
