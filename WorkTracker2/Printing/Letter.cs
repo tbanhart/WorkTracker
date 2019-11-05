@@ -66,7 +66,7 @@ namespace WorkTracker2.Printing
 
             doc.PrintOut();
             doc.Close(SaveChanges: false);
-
+            wordApp.Quit();
             Console.WriteLine(DisplayText + " has been printed.");
             return true;
         }

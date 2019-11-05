@@ -142,6 +142,19 @@ namespace WorkTracker2.Core
                         if(selectedDates.Contains(dictionary["Date"])) ReportObject.Instance.AddValueToRecord(dictionary);
                     }
                 }
+                if (SelectedTable == "[Active Letters]")
+                {
+                    dictionaryList = dataManager.LimitedPull(
+                        $"'{Database}'", $"Archive", "Date", item);
+                    if (dictionaryList != null)
+                    {
+                        foreach (var dictionary in dictionaryList)
+                        {
+                            //Console.WriteLine(dictionary);
+                            if (selectedDates.Contains(dictionary["Date"])) ReportObject.Instance.AddValueToRecord(dictionary);
+                        }
+                    }
+                }
             }
         }
         #endregion

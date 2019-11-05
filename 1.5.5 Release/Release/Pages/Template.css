@@ -1,0 +1,79 @@
+﻿
+body 
+{
+    font-family: Tahoma;
+    margin: 0;
+}
+
+.header {
+    height: 100px;
+    text-align: center;
+    background: #1A80CA;
+    color: #FFFCFF;
+    overflow: hidden;
+}
+
+.seperator {
+    display: flex;
+    background-color: #50514F;
+    height: 10px;
+}
+
+.flex-container {
+    overflow:hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    overflow:hidden;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.side {
+    flex: 15%;
+    overflow:hidden;
+    background-color: #50514F;
+}
+
+.main {
+    flex: 70%;
+    overflow:scroll;
+    height: 87vh;
+    background-color: #C0D6DF;
+    padding: 20px;
+}
+
+.exampleImg {
+    width: 100%;
+    padding: 20px;
+}
+
+.button {
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    padding: 0px;
+    color: #FFFCFF;
+    height: 100px;
+    width: 100%;
+    background: #50514F;
+}
+
+.button:focus {
+    outline: 0;
+    color: black;
+    background: #C0D6DF;
+}
+
+.button:hover {
+    color: black;
+    background: #C0D6DF;
+}
+
+.overflow-auto{
+    overflow:auto;
+    position:absolute;
+}

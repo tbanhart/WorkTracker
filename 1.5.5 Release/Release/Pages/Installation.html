@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/cshtml">
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Trevor Banhart" />
+    <meta name="description" content="A guide to WorkTracker" />
+    <link rel="stylesheet" type="text/css" href="Template.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+    </style>
+    <title>WorkTracker Documentation</title>
+</head>
+<body>
+    <script type="text/javascript">
+        document.getElementById("button").onclick = function () {
+            location.href = value;
+        };
+    </script>
+    <div class="flex-container">
+        <div class="header">
+            <h1 id="top">Welcome to the WorkTracker Documentation</h1>
+        </div>
+
+        <div class="seperator"></div>
+
+        <div class="row">
+            <div class="side">
+                <form>
+                    <input type="button" class="button" value="Home" onclick="location.href = 'Start.html';" />
+                    <input type="button" class="button selected" value="Installation" onclick="location.href = 'Installation.html';" />
+                    <input type="button" class="button" value="Core Features" onclick="location.href = 'CoreFeatures.html';" />
+                    <input type="button" class="button" value="Report Generator" onclick="location.href = 'ReportGenerator.html';" />
+                    <input type="button" class="button" value="Utilities" onclick="location.href = 'Utilities.html';" />
+                </form>
+            </div>
+
+            <div class="main" , id="content">
+
+                <h2>Installation</h2>
+                <p>The WorkTracker files can all be setup from the Deferred Output folder of the I: drive. Since the setup is done for a shared folder, updates will be automatically detected when launching the WorkTracker application. When an update is detected by the launch sequence, a window will prompt the user to update the program. Always select yes, as a new update may patch in a fix for currently existing issues.</p>
+
+                <h3>First Time Setup</h3>
+                <p>The first time the application is used, a window will prompt the user to enter their initials. The initials entered will be shown on QC sheets that user generates when the submit the information to the printer via the main window. A minimum of two and a maximum of three characters can be entered for their initials, and if a mistake is made or the user wants to change them at a later date, they may do so by selecting the User utility in the toolbar of the main window. User initials are submitted to the DOP database and associated with the user's DT number from their Windows username. As such, when a user changes computers the program will automatically load their initials, provided they have used the program before.</p>
+
+                <h3>Client Setup</h3>
+                <p>Before printing the QC sheet for their first letter, a user will need to designate which clients they are responsible for. This can be done in the clients utility found in the toolbar and must be done before the user can begin printing QC sheets. For more information on selecting clients, see the Clients section of the Utilities chapter.</p>
+            </div>
+        </div>
+        <div class="seperator"></div>
+    </div>
+</body>
+</html>

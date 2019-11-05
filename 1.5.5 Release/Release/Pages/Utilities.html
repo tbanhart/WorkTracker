@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/cshtml">
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Trevor Banhart" />
+    <meta name="description" content="A guide to WorkTracker" />
+    <link rel="stylesheet" type="text/css" href="Template.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+    </style>
+    <title>WorkTracker Documentation</title>
+</head>
+<body>
+    <script type="text/javascript">
+        document.getElementById("button").onclick = function () {
+            location.href = value;
+        };
+    </script>
+    <div class="flex-container">
+        <div class="header">
+            <h1 id="top">Welcome to the WorkTracker Documentation</h1>
+        </div>
+
+        <div class="seperator"></div>
+
+        <div class="row">
+            <div class="side">
+                <form>
+                    <input type="button" class="button" value="Home" onclick="location.href = 'Start.html';" />
+                    <input type="button" class="button" value="Installation" onclick="location.href = 'Installation.html';" />
+                    <input type="button" class="button" value="Core Features" onclick="location.href = 'CoreFeatures.html';" />
+                    <input type="button" class="button" value="Report Generator" onclick="location.href = 'ReportGenerator.html';" />
+                    <input type="button" class="button selected" value="Utilities" onclick="location.href = 'Utilities.html';" />
+                </form>
+            </div>
+
+            <div class="main" , id="content">
+
+                <h2>Utilities</h2>
+                <p>To support the core functions of the program, the WorkTracker application is packaged with a few additional utilites in order to make it easier to view and change application data.</p>
+
+                <h3>Change User</h3>
+                <p>As mentioned earlier, if a user enters the incorrect initials or wishes to change how their name is displayed on the QC sheets they generate, they can do so by selecting the Change User utility. The minimum and maximum size for entries are two and three, respectively. The initials a user designates are tied to their ID number provided by DST, which is derived from their Windows username. As such, a user changing to a different computer will still be known by the same initials if they change computers.</p>
+
+                <h3>Clients</h3>
+                <p>In order to designate a client to print QC sheets for, a user must first populate their client list through the use of the Clients utility. Clients are divided into prods, and a user may select which prod they are servicing to filter the client list into relevant clients. Beneath the boxes for all clients and user clients are buttons that allow a selected client from that list to be added or removed from the client list. When the user client list contains all clients the user is responsible for, clicking done will update the main window with all user clients.\nThe user client list is stored locally in the application data, and as such will be reset when the program updates, requiring the user to designate their clients again.</p>
+            </div>
+        </div>
+        <div class="seperator"></div>
+    </div>
+</body>
+</html>

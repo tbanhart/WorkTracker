@@ -63,48 +63,4 @@ Bugs:
 +Added installer to shared drive instead of deploying through .zip archives
 +Prints a QC sheet complete with details on QC fail
 +Completed letters are archived in seperate table
-
-1.2.4.10
-+QC Fail sheets now correctly generate with QC user initials and comments
-+Fix: updating info was giving an error about converting to int -- did not have apostrophes around values being pushed
-+Fix: searching was not displaying when trying to find encorr
-+Generator now searches for search term contained in any entry, not just matching entire string
-+HTML documentation created to answer questions
-
-1.2.5.0
-Main Window
- +Moved Add to Database button to Utility menu, Add to Queue button sends to database and prints
- +Added a list to display and edit recently submitted entries
- +Fix: "Other" type is now correctly marked on QC Sheet with comments
-Report Generator
- +Approved and removed letters are now removed from active letters when archived
- +Report views now organize all tree nodes alphabetically (or numerically)
- +Doing QC on a letter no longer prints a QC sheet
- +QC Comments box has pre-filled options available
- +Fix: No longer need to select a date prior to generating a report, will automatically do today's date
- +Fix: Correctly pulls letters from all selected dates
-Client Updater
- +Client lists organize clients in alphabetical order
-Updating
- +Added an updates screen when first loading after an update
- +No longer need to add all of clients again when program updates
- 
-1.2.5.1
-Main Window
- +Fix: QC sheet printed when Main was asking you to update letter
- +Fix: Type no longer prints both in other and in selected
- +Fix: Selecting a range of text replaces the range with the key typed instead of replacing just the first number
-
-1.2.5.3
-Updating
- +Fix: Update window no longer appears every time application is opened
-Reporting
- +Generating a report now includes archived letters completed through QC when selecting active letters
-
-1.2.5.4
-Data
- +Added Transfer and Reclaim to standard letter types
-
-1.2.5.5
-Printing
- +Fix: No longer stops printing QC sheets after ~100 prints
++
